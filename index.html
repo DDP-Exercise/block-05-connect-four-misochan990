@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Connect Four</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--TODO: Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
+    <!-- Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
 
+    <div class="sparkle-overlay">
+        <h1>Welcome to Barbie's Connect Four</h1>
+
+        <div class="game-area">
+
+            <div id="barbie_avatar" class="barbie_avatar_activ">
+                <img src="pics/barbie_avatar.png" alt="Barbie Avatar" class="barbie">
+                <div class="name">Barbie</div>
+            </div>
+
+            <div class="grid">
+                <div id="coins-layer"></div>
+
+                <img src="pics/grid.png" id="grid-overlay" alt="grid-layout">
+
+                <div id="click-zones">
+                    <div class="column" data-col="0"></div>
+                    <div class="column" data-col="1"></div>
+                    <div class="column" data-col="2"></div>
+                    <div class="column" data-col="3"></div>
+                    <div class="column" data-col="4"></div>
+                    <div class="column" data-col="5"></div>
+                    <div class="column" data-col="6"></div>
+                 </div>
+            </div>
+            <div id="preminger_avatar" class="preminger_avatar_activ">
+                <img src="pics/barbie villain_avatar.png" alt="Villain Avatar" class="villain">
+                <div class="name">Preminger</div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="module" src="js/controller.connectfour.js"></script>
+<script type="module" src="js/model.connectfour.js"></script>
+<script type="module" src="js/view.console.js"></script>
+<script type="module" src="js/view.polished.js"></script>
 </body>
 </html>

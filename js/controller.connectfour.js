@@ -41,7 +41,27 @@
  *******************************************************/
 
 
-//TODO: Create your controller-object. When initiated, it should boot
+// Create your controller-object. When initiated, it should boot
 //      the view (or views, if you decide to make a console-view).
 
-//TODO: Add EventListeners, to forward the user inputs to the model.
+// Add EventListeners, to forward the user inputs to the model.
+
+
+import {MODEL} from './model.connectfour.js';
+import {VIEW} from './view.polished.js';
+
+const controller = {
+
+    init: function() {
+        VIEW.init();
+
+        VIEW.bindColumnClicks((colIndex) => {
+            MODEL.dropStone(colIndex);
+        });
+    }
+};
+
+controller.init();
+
+
+//Important: please play in full screen :)
